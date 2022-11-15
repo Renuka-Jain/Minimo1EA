@@ -36,6 +36,20 @@ const navOptions = [
         exact: true,
         auth: unAuth()
     },
+    {
+        name: 'Report List',
+        path: '/reportlist',
+        icon: '../assets/User.png',
+        exact: true,
+        auth: unAuth()
+    },
+    {
+        name: 'New Report',
+        path: '/reportnew',
+        icon: '../assets/User.png',
+        exact: true,
+        auth: unAuth()
+    },
 ];
 
 function unAuth(){

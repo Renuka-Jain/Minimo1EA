@@ -1,0 +1,29 @@
+<div id="ListForm" class="header">
+    <h2>Reports list</h2>
+</div>
+
+<table class="table table-striped">
+    <tr>
+        <td>Report ID</td>
+        <td>Content</td>
+        <td>UserID</td>
+        <td>Date</td>
+        <td>Verified</td>
+    </tr>
+    <tr *ngFor="let Report of list">
+        <td style="color:rgb(255, 255, 255)">{{Report._id}}</td>
+        <td style="color:rgb(255, 255, 255)">{{Report.content}}</td>
+        <td style="color:rgb(255, 255, 255)">{{Report.owner}}</td>
+        <td style="color:rgb(255, 255, 255)">{{Report.date}}</td>
+        <td style="color:rgb(255, 255, 255)">{{Report.accepted}}</td>
+        <td>
+            <button class="delete-button" (click)="deleteRepo(Report._id!)">
+                Delete
+            </button>
+            <button class="delete-button" (click)="go2Update(Report._id!)">
+                Update
+            </button> 
+            
+        </td>
+    </tr>
+</table>

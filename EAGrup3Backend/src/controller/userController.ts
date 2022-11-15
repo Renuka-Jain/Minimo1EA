@@ -59,7 +59,7 @@ const profile = async (req: Request, res: Response) => {
 };
 
 const getall = async (req: Request, res: Response) => {
-	const users = await User.find();
+	const users = await User.find().populate('series');
 	res.status(200).json(users);
 };
 
